@@ -1,8 +1,8 @@
 from langchain.tools import tool
 from langchain.agents import initialize_agent, AgentType
 from langchain.chat_models import ChatOpenAI
-from .serpapi_tool import get_product_data
-from .utils import save_df_to_csv
+from serpapi_tool import get_product_data
+from utils import save_df_to_csv
 
 @tool
 def shop_out(product_name: str) -> str:

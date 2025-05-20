@@ -10,7 +10,11 @@ def get_product_data(product_name: str):
     search = GoogleSearch({
         "q": product_name,
         "engine": "google_shopping",
-        "api_key": SERPAPI_KEY
+        "api_key": SERPAPI_KEY,
+        "location": "South Africa",
+        "gl": "za",
+        "hl": "en",
+        "google_domain": "google.co.za"
     })
 
     results = search.get_dict()
@@ -18,12 +22,13 @@ def get_product_data(product_name: str):
     
     data = []
     for item in items:
-        data.append({
-            "title": item.get("title"),
-            "price": item.get("price"),
-            "source": item.get("source"),
-            "link": item.get("link")
-        })
+            data.append({
+        "title": item.get("title"),
+        "price": item.get("price"),
+        "source": item.get("source"),
+        "product_link": item.get("link")  # ← This is the product link
+    })
+
 
     df = pd.DataFrame(data)
     return df
