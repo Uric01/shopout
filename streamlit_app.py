@@ -1,7 +1,7 @@
 import streamlit as st
-from app.agent import get_agent
-from app.serpapi_tool import get_product_data
-from app.utils import save_df_to_csv
+from agent import get_agent
+from serpapi_tool import get_product_data
+from utils import save_df_to_csv
 
 st.set_page_config(page_title="Shop Out Tool", layout="centered")
 
