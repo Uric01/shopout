@@ -1,1 +1,6 @@
-
+langchain
+openai
+streamlit
+pandas
+python-dotenv
+google-search-results
