@@ -57,7 +57,7 @@ def get_product_data(product_name: str) -> pd.DataFrame:
 
 
         data.append({
-            "title": item.get("title"),
+            "product_title": item.get("title"),
             "promotion_price": promotion_price,
             "normal_price": normal_price,
             "source": item.get("source"),
