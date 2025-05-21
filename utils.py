@@ -1,19 +1,8 @@
-import urllib.request
+import pandas as pd
 
-def is_url_alive(url: str) -> bool:
+def save_df_to_csv(df: pd.DataFrame, filename: str = "shop_out_results.csv") -> str:
     """
-    Checks if a given URL is reachable.
-    :param url: The URL to check.
-    :return: True if the URL is reachable, False otherwise.
+    Saves the DataFrame to a CSV file and returns the file path.
     """
-    try:
-        request = urllib.request.Request(url, method='HEAD')
-        response = urllib.request.urlopen(request, timeout=5)
-        return response.status == 200
-    except Exception:
-        return False
-
-
-def save_df_to_csv(df, filename="shop_out_results.csv"):
     df.to_csv(filename, index=False)
     return filename
