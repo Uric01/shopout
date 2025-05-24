@@ -5,3 +5,4 @@ pandas
 python-dotenv
 google-search-results
 urllib3
+serpapi
