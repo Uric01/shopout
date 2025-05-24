@@ -53,7 +53,7 @@ def get_product_data(product_name: str) -> pd.DataFrame:
                 "promotion_price": promotion_price,
                 "source": source,
                 "product_link": link,
-                "sponsored": sponsored_flag,
+                #"sponsored": sponsored_flag,
             })
         return results
 
@@ -74,5 +74,5 @@ def get_product_data(product_name: str) -> pd.DataFrame:
             final_items.append(item)
 
     return pd.DataFrame(final_items) if final_items else pd.DataFrame(columns=[
-        "title", "normal_price", "promotion_price", "source", "product_link", "sponsored"
+        "title", "normal_price", "promotion_price", "source", "product_link"
     ])
