@@ -74,5 +74,5 @@ def get_product_data(product_name: str) -> pd.DataFrame:
             final_items.append(item)
 
     return pd.DataFrame(final_items) if final_items else pd.DataFrame(columns=[
-        "title", "normal_price", "promotion_price", "source", "product_link"
+        "product_title", "normal_price", "promotion_price", "source", "product_link"
     ])
