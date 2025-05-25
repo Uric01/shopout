@@ -33,9 +33,10 @@ if not df.empty:
     
     # Build clickable link column
     df_display = df.copy()
-    df_display["Google_Shop"] = df_display["product_link"].apply(
-        lambda x: f'<a href="{x}" target="_blank">Click Me</a>'
+    df["Google_Shop"] = df['product_link'].apply(
+    lambda x: f'<a href="{x}" target="_blank" style="text-decoration: none;">🔗 View</a>'
     )
+
     df_display = (
         df_display
         .drop(columns=['product_link'])
