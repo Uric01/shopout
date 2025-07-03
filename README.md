@@ -69,6 +69,14 @@ streamlit run your_script.py
 - `shop_out_results.csv`: A CSV file containing product details and links.
 
 ---
+---
+
+## 📸 Screenshot
+
+![Chatbot Screenshot](shopout.png)
+
+---
+
 
 ## 📄 License
 
