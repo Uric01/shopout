@@ -4,7 +4,7 @@ from serpapi import GoogleSearch
 from dotenv import load_dotenv
 
 load_dotenv()
-SERPAPI_API_KEY = os.getenv("SERPAPI_KEY")  # Make sure your .env uses this exact key name
+SERPAPI_API_KEY = os.getenv("SERPAPI_KEY")  # Make sure your .env uses this exact key name..
 
 def get_product_data(product_name: str) -> pd.DataFrame:
     if not product_name.strip():
