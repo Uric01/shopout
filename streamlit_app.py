@@ -7,6 +7,7 @@ st.title("🛍️ Shop Out - Compare Product Prices")
 
 product = st.text_input("Enter a product to shop out:")
 
+#search button
 if st.button("Run Shop Out"):
     with st.spinner("Fetching updated data..."):
         df = get_product_data(product)
@@ -25,7 +26,7 @@ if st.button("Run Shop Out"):
                 "title": "Product_Name",
                 "source": "Retailer_Name"
             })
-
+            #display the results
             st.markdown(df_display.to_html(escape=False, index=False), unsafe_allow_html=True)
 
             df.to_csv("shop_out_results.csv", index=False)
