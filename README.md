@@ -80,4 +80,4 @@ streamlit run your_script.py
 
 ## 📄 License
 
-MIT License. open for use and extension.
+MIT License. Open for use and extension.
